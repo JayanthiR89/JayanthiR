@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+figure {
+    padding: 5px;
+    display: table;
+}
+ 
+figure img { 
+    display: block;
+}
+ 
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+	text-align: center;
+}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+ 
+}
+
+#Home {background-image: url(bg.jpg); }
+#News {background-image: url(bg.jpg); }
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('News', this, 'Black')" id="defaultOpen">Research Question 1</button>
+<button class="tablink" onclick="openPage('Home', this, 'Black')">Research Question 2</button>
+
+
+<div id="News" class="tabcontent">
+  <h3>Research Question 1: How has the importance of religion changed over the years</h3>
+  <p>It is interesting to note that, over the years the importance of religion in people' life has decreased. Even in that case, it is interesting to note that women are more religious or have beliefs when compared to men.</p> 
+  <Table>
+  <tr>
+  <td>
+  <figure>
+  <img src="Time Series.png" height="472" width="520" \>
+  <figcaption>The time series shows the decreasing importance to religion through the years</figcaption>
+</figure>
+</td>
+<td>
+<figure>
+  <img src="Religion and Men.png" height="472" width="520" \>
+  <figcaption>The graph showed that women considered religion more important than men (but when trying to screen capture, even after filtering, the graph updated to show only information related to men. :))</figcaption>
+</figure>
+</td>
+</tr>
+</Table>
+</div>
+
+<div id="Home" class="tabcontent">
+  <h3>Research Question 2: How does the importance for values changes by age across years</h3>
+  <p>Home is where the heart is..</p>
+  <iframe style="border: 2px solid #ebebeb; height: 600px; width: 100%;" src="https://vizydrop.com/shared/drop/5e5176852d670a6a28d0ec8b?authkey=2bfb7c6d1be60b0d3d72" ></iframe>
+</div>
+
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
