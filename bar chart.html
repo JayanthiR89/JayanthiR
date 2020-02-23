@@ -82,10 +82,25 @@ body, html {
   fill:black; 
 }
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 }
 </style>
 </head>
 <body>
+<h3>How does the importance for friends, family, work, religion, politics, state of health, feeling of happiness and satisfaction with life changes by age across the year.<h3>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.13/d3.min.js"></script>
     <script>
 
@@ -368,4 +383,30 @@ legend.append("text")
 });
 
 </script>
+<h4>The visualisation has not been fully developed as per the initial conceptualisation. Below is the visualisation concept sketch</h4>
+<div class="row">
+  <div class="column">
+    <figure>
+  <img src="V1.png" height="442" width="350" \>
+  <figcaption>The inital visualisation shows the overall importance for values across all waves for 30 countries</figcaption>
+</figure>
+  </div>
+  <div class="column">
+    <figure>
+  <img src="V2.png" height="442" width="350" \>
+  <figcaption>When a legend is clicked, the importance with reference to a particular value is alone showed</figcaption>
+</figure>
+  </div>
+  <div class="column">
+    
+  
+  <figure>
+  <img src="V3.png" height="442" width="350" \>
+  <figcaption>When a country is clicked, the scale changes. It shows the values along the x-axis and the importance for them across the wave as a stacked bar chart. A slider appears on top and the importance for values changes as the slider is scrolled</figcaption>
+</figure>
+  </div>
+</div>
+  
+
+
 </body>
