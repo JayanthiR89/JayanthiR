@@ -1,153 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-figure {
-    padding: 5px;
-    display: table;
-}
- 
-figure img { 
-    display: block;
-}
- 
-figcaption {
-    display: table-caption;
-    caption-side: bottom;
-	text-align: center;
-}
-
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-  background-color: #F9F5F2;
-  
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 100px 20px;
- 
-}
-
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: steelblue;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.tooltip{
-  text-anchor: middle;
-  font-family: sans-serif;
-  font-size: 10px;
-  font-weight: bold;
-  fill:black; 
-}
-
-}
-</style>
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('News', this, 'Black')" id="defaultOpen">Research Question 1</button>
-<button class="tablink" onclick="openPage('Home', this, 'Black')">Research Question 2</button>
+<div class="row">
 
+      <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+        <!-- Grey navigation panel
 
-<div id="News" class="tabcontent">
-  <h3>Research Question 1: How has the importance of religion changed over the years</h3>
-  <p>It is interesting to note that, over the years the importance of religion in people' life has decreased. Even in that case, it is interesting to note that women are more religious or have beliefs when compared to men. THe online analysis tool of the World Values Survey helps to analyse the data in many way like how many people in total answered, how many people answered to a particular option. The issue with the tool is that it does not allow to compare the inter relation between more than two values.  </p> 
-  <Table>
-  <tr>
-  <td>
-  <figure>
-  <img src="Time Series.PNG" height="472" width="520" \>
-  <figcaption>The time series shows the decreasing importance to religion through the years</figcaption>
-</figure>
-</td>
-<td>
-<figure>
-  <img src="Religion and Men.PNG" height="472" width="520" \>
-  <figcaption>The graph showed that women considered religion more important than men (but when trying to screen capture, even after filtering, the graph updated to show only information related to men. :))</figcaption>
-</figure>
-</td>
-</tr>
-</Table>
-</div>
+              This content will be:
+          3-columns-wide on large screens,
+          4-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
 
-<div id="Home" class="tabcontent">
-  <h3>Research Question 2: How does the importance for friends, family, work, religion, politics, state of health, feeling of happiness and satisfaction with life changes by age across the year.</h3>
-  <h4> <a href="bar chart.html">View the visualisation here</a>
-<h4> As the visualisation has not been fully realised as conceptualised, below are some finding based on analysis without the visualisation</h4>
+      </div>
 
-<h4> The research findings are:</h4>
-<h4>The core values remain the same across all waves for people of all ages. There is no drastic shift or focus or importance to one value whic seems to have increased as a trend over the years. What seemed to be priorities for a person at 15 years during the Wave 3 is same for a 15 year old person in wave 6. The economic boom that has been witnessed by several countries have not altered the basic value systems</h4>
-<img src="W3.png" height="372" width="1120" \>
-<img src="W4.png" height="372" width="1120" \>
-<img src="W5.png" height="372" width="1120" \>
-<!--<img src="W6.png" height="372" width="1120" \>-->
+      <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+        <!-- Teal page content
 
+              This content will be:
+          9-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
 
+      </div>
 
-<!-- <iframe style="border: 2px solid #ebebeb; height: 600px; width: 100%;" src="https://vizydrop.com/shared/drop/5e5176852d670a6a28d0ec8b?authkey=2bfb7c6d1be60b0d3d72" ></iframe>-->
-</div>
-
-
-
-
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+    </div>
+          
    
 </body>
 </html> 
